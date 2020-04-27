@@ -2,53 +2,65 @@
 
 ## Entendimento de negócio
 
-* Retail Co. é uma empresa de lojas de departamentos, com mais de 
-* What business problems are we trying to address?
+Retail Co. é uma empresa de lojas de departamentos, com 45 lojas localizadas em diferentes localidades. Cada loja possui uma quantidade de departamentos, onde produtos de diversos tipos são vendidos. Frequentemente, a empresa investe em propagandas e promoções (Markdown), que geralmente são feitas antes de feriados importantes, como super bowl, dia do trabalho...
 
-## Scope
-* What data science solutions are we trying to build?
-* What will we do?
-* How is it going to be consumed by the customer?
 
-## Personnel
-* Who are on this project:
-	* Microsoft:
-		* Project lead
-		* PM
-		* Data scientist(s)
-		* Account manager
-	* Client:
+
+## Escopo
+
+A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de vendas e logística. Para isso, a empresa fez uma coleta de histórico semanal de suas vendas, em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas.
+
+* A solução deve observar o histórico de dados e fazer a previsão das próximas semanas.
+* Os dados serão coletadas através de arquivos CSV de um servidor FTP.
+* O resultado da previsão será exportado como arquivo CSV.
+* O resultado pode ser consumido em relatórios estáticos.
+
+## Pessoal
+* Quem está no projeto:
+	* Consultoria:
+		* Project lead (Thiago)
+		* PO (Thiago)
+		* Data scientist(s) (Oliveira, Machado)
+		* Account manager (Oliveira)
+	* Retail Co:
 		* Data administrator
 		* Business contact
 
-## Metrics
-* What are the qualitative objectives? (e.g. reduce user churn)
-* What is a quantifiable metric  (e.g. reduce the fraction of users with 4-week inactivity)
-* Quantify what improvement in the values of the metrics are useful for the customer scenario (e.g. reduce the  fraction of users with 4-week inactivity by 20%)
-* What is the baseline (current) value of the metric? (e.g. current fraction of users with 4-week inactivity = 60%)
-* How will we measure the metric? (e.g. A/B test on a specified subset for a specified period; or comparison of performance after implementation to baseline)
+## Métricas
+* Objetivo qualitativo: otimizar o planejamento da planta de produção.
+* Figura de mérito: erro absoluto percentual médio (MAPE)
+* Benchmarking: processo atual trabalha com um MAPE de aproximadamente 50%.
+* Métrica deve ser medida sobre todo o histórico de teste, que possui o mesmo comprimento que o horizonte de previsão da ferramenta (20 semanas).
 
-## Plan
-* Phases (milestones), timeline, short description of what we'll do in each phase.
 
-## Architecture
-* Data
-  * What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)
-* Data movement from on-prem to Azure using ADF or other data movement tools (Azcopy, EventHub etc.) to move either
-  * all the data,
-  * after some pre-aggregation on-prem,
-  * Sampled data enough for modeling
+## Planejamento
+O projeto deve ser realizado em 2 meses. Está prevista uma sessão de design thinking para o entendimento e a passagem de conhecimento entre os especialistas do negócio e a equipe de cientistas de dados (representada pelo PO).
+* Semana 1: entendimento de negócio, sessões de transferencia de conhecimento e planejamento desenho da solução.
+* Semana 2-6: ciclos de desenvolvimento da solução inicial (sprints).
+* Semana 7: geração de relatórios e documentação.
+* Semana 8: apresentação dos resultados finais e transferência de conhecimento.
 
-* What tools and data storage/analytics resources will be used in the solution e.g.,
-  * ASA for stream aggregation
-  * HDI/Hive/R/Python for feature construction, aggregation and sampling
-  * AzureML for modeling and web service operationalization
-* How will the score or operationalized web service(s) (RRS and/or BES) be consumed in the business workflow of the customer? If applicable, write down pseudo code for the APIs of the web service calls.
-  * How will the customer use the model results to make decisions
-  * Data movement pipeline in production
-  * Make a 1 slide diagram showing the end to end data flow and decision architecture
-    * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
+## Arquitetura
 
-## Communication
-* How will we keep in touch? Weekly meetings?
-* Who are the contact persons on both sides?
+* Dados:
+  * Os dados são entregues através de 3 arquivos CSV, lidos de uma conexão FTP. Os dados coletados são processados para saneamento e avaliação da sua qualidade.
+  * A série histórica possui aproximadamente 2 anos.
+  * São coletadas 10 variáveis exógenas.
+
+* Modelos:
+  * Será desenvolvido um modelo de auto ML para a previsão das séries temporais.
+  * Os modelos serão desenvolvidos utilizando o Azure ML.
+  * O treinamento dos modelos aproveitará a tecnologia Spark via utilização do ambiente Databricks.
+
+* Relatórios:
+  * Os relatórios serão feitos após o processamento do treinamento dos modelos.
+  * Os relatórios são disponibilizados como exportações HTML dos notebooks utilizados.
+
+
+
+## Comunicação
+* Equipe de desenvolvimento com reuniões diárias em modelo Scrum.
+* Reuniões de status executivos a cada 3 semanas.
+* Pontos de contato:
+  * Retail Co.: Soares
+  * Consultoria: Thiago
