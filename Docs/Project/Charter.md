@@ -1,56 +1,52 @@
-# Project Charter
+# Project Vivino AI
 
 ## Entendimento de negócio
 
-Retail Co. é uma empresa de lojas de departamentos, com 45 lojas localizadas em diferentes localidades. Cada loja possui uma quantidade de departamentos, onde produtos de diversos tipos são vendidos. Frequentemente, a empresa investe em propagandas e promoções (Markdown), que geralmente são feitas antes de feriados importantes, como super bowl, dia do trabalho...
-
-
+Um cliente importador de vinhos portugueses deseja aumentar as suas vendas e para isso necessita de classificar alguns vinhos por nota de 0 a 10 de acordo com uma base de avaliação de vinhos portugueses. 
 
 ## Escopo
 
-A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de vendas e logística. Para isso, a empresa fez uma coleta de histórico semanal de suas vendas, em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas.
+A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de vendas e logística. Para isso, a empresa utilizou uma base histórica, em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas.
 
-* A solução deve observar o histórico de dados e fazer a previsão das próximas semanas.
-* Os dados serão coletadas através de arquivos CSV de um servidor FTP.
+* A solução deve observar o histórico de dados e prover uma avaliação, por nota de qualidade para cada vinho
+* Os dados serão coletadas através de arquivos CSV.
 * O resultado da previsão será exportado como arquivo CSV.
 * O resultado pode ser consumido em relatórios estáticos.
 
 ## Pessoal
 * Quem está no projeto:
 	* Consultoria:
-		* Project lead (Thiago)
-		* PO (Thiago)
-		* Data scientist(s) (Oliveira, Machado)
-		* Account manager (Oliveira)
-	* Retail Co:
-		* Data administrator
-		* Business contact
+		* Project lead (Marcelo)
+		* PO (Camilla)
+		* Data scientist(s) (Octavio)
+		* Account manager (Edimilson)
+	* Vivino:
+		* Data administrator (Maria José)
+		* Business contact (Anderson)
 
 ## Métricas
-* Objetivo qualitativo: otimizar o planejamento da planta de produção.
+* Objetivo qualitativo: Acurácia igual ou superior a 90%. Quantidade de acertos de avaliação por quantidade de existentes
 * Figura de mérito: erro absoluto percentual médio (MAPE)
 * Benchmarking: processo atual trabalha com um MAPE de aproximadamente 50%.
-* Métrica deve ser medida sobre todo o histórico de teste, que possui o mesmo comprimento que o horizonte de previsão da ferramenta (20 semanas).
+* Métrica deve ser medida sobre todo o histórico de teste.
 
 
 ## Planejamento
-O projeto deve ser realizado em 2 meses. Está prevista uma sessão de design thinking para o entendimento e a passagem de conhecimento entre os especialistas do negócio e a equipe de cientistas de dados (representada pelo PO).
+O projeto deve ser realizado em 1 mes. Está prevista a passagem de conhecimento entre os especialistas do negócio e a equipe de cientistas de dados (representada pelo PO).
 * Semana 1: entendimento de negócio, sessões de transferencia de conhecimento e planejamento desenho da solução.
-* Semana 2-6: ciclos de desenvolvimento da solução inicial (sprints).
-* Semana 7: geração de relatórios e documentação.
-* Semana 8: apresentação dos resultados finais e transferência de conhecimento.
+* Semana 2 e 3: ciclos de desenvolvimento da solução inicial (sprints).
+* Semana 4: geração de relatórios e documentação e apresentação dos resultados finais e transferência de conhecimento.
 
 ## Arquitetura
 
 * Dados:
-  * Os dados são entregues através de 3 arquivos CSV, lidos de uma conexão FTP. Os dados coletados são processados para saneamento e avaliação da sua qualidade.
-  * A série histórica possui aproximadamente 2 anos.
-  * São coletadas 10 variáveis exógenas.
+  * Os dados são entregues através de 2 arquivos CSV, entregues por uma empresa especializada em pesquisas. Os dados coletados são processados para saneamento e avaliação da sua qualidade.
+  * A série histórica possui aproximadamente 7000 registros.
+  * São coletadas 12 variáveis exógenas.
 
 * Modelos:
-  * Será desenvolvido um modelo de auto ML para a previsão das séries temporais.
-  * Os modelos serão desenvolvidos utilizando o Azure ML.
-  * O treinamento dos modelos aproveitará a tecnologia Spark via utilização do ambiente Databricks.
+  * Será desenvolvido um modelo de ML para a previsão da qualidade dos vinhos.
+  * Os modelos serão desenvolvidos utilizando jupyter notebooks.
 
 * Relatórios:
   * Os relatórios serão feitos após o processamento do treinamento dos modelos.
@@ -60,7 +56,7 @@ O projeto deve ser realizado em 2 meses. Está prevista uma sessão de design th
 
 ## Comunicação
 * Equipe de desenvolvimento com reuniões diárias em modelo Scrum.
-* Reuniões de status executivos a cada 3 semanas.
+* Reuniões de status executivos a cada semana.
 * Pontos de contato:
-  * Retail Co.: Soares
-  * Consultoria: Thiago
+  * Vivino Co.: Anderson 
+  * Consultoria: Edimilson
