@@ -8,7 +8,7 @@ Esse relatório das bases de dados do projeto.
 
 
 | Nome Dataset | Origem   | Destino  | Script |
-| ---:| ---: | ---: | ---: | -----: |
+| ----:| ----: | ----: | ----: | ------: |
 | Wine| Red Wine + White Wine | Processado para qualidade de dados | [data_prep.ipynb](../../Code/DataPrep/data_perp.ipynb) | 
 
 
@@ -18,7 +18,7 @@ Possui as seguintes colunas: 'fixed acidity', 'volatile acidity', 'citric acid',
 
 Os arquivos foram combinados e foram adicionadas duas colunas indicando o tipo do vinho: 'red' e 'white'
 
-Todas as colunas exceto 'quality', 'red' e 'white' são do tipo float.
+Todas as colunas são do tipo float exceto 'quality', 'red' e 'white' que são int.
 
 
 

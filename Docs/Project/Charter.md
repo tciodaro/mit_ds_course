@@ -32,6 +32,7 @@ O problema de análise de qualidade do vinho pode ser abordado como um problema 
 
 * Dados:
   * Os dados são entregues através de 2 arquivos CSV. Os dados coletados são processados para saneamento e avaliação da sua qualidade.
+  * Relatório de dados disponível [aqui](../DataReport/Report.md "Relatório de dados")
 
 ## Comunicação
 * Equipe de desenvolvimento com reuniões diárias em modelo Scrum.
