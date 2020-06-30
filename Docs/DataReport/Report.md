@@ -26,7 +26,7 @@ Colunas traduzidas:  ['IdPassageiro, Sobreviveu', 'Classe', 'Nome', 'Sexo', 'Ida
 | Sobreviveu    | Sobreviveu ou não ao desastre       | 0 = Não, 1 = Sim                                 |
 | Classe        | Tipo de classe de passagem          | 1 = Primeira, 2 =   Segunda, 3 = Terceira        |
 | Nome          | Nome do Passageiro                  |                                                  |
-| Sexo          | Gênero do passageiro                | male \| female                                   |
+| Sexo          | Gênero do passageiro                | Homem \| Mulher                                   |
 | Idade         | Idade do passageiro                 |                                                  |
 | IrmaosCasal   | Número de irmãos / cônjuges a bordo |                                                  |
 | PaisFilhos    | Número de pais / filhos a bordo     |                                                  |
