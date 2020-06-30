@@ -11,11 +11,25 @@ Uma das razões pelas quais o naufrágio levou a tal perda de vidas foi que não
 
 Para esse projeto, é preciso fazer uma análise e prever se um passageiro sobreviveu ao naufrágio do Titanic ou não.
 Para cada um no conjunto de testes, você precisa informar um número para o IdPassageiro e o modelo deve prever um valor 0 ou 1 para a variável Sobreviveu, sendo 0 - Não e 1 - Sim. 
+Precisamos também para realizar esse projeto, prever as idades faltantes no dataset, uma vez que é uma variável importantissíma para a predição correta da sobrevivência. 
 
-Com isso, teremos um problema de Classificação, para determinar quem sobreviveu ou não ao naufrágio:
+Com isso, teremos 2 problemas: Um de regressão para predizer as idades dos passageiros faltantes e outro de Classificação, para determinar quem sobreviveu ou não ao naufrágio:
 
 
-* **Problema**: classificação binária
+* **Problema 1**: Regressão
+* **Algoritmo**: treinamento supervisionado
+* **Base de dados**: arquivos csv originarios do Kaggle's Titanic: Machine Learning from Disaster (https://www.kaggle.com/c/titanic/data)
+* **Variável alvo**: Idade (Age)
+
+## Métricas
+* Objetivo qualitativo: Prever a idade dos passageiros a bordo
+* Figura de mérito: MSRE
+* Benchmarking: 70%.
+* Métrica deve ser medida sobre um conjunto dos dados.
+
+
+
+* **Problema 2**: classificação binária
 * **Algoritmo**: treinamento supervisionado
 * **Base de dados**: arquivos csv originarios do Kaggle's Titanic: Machine Learning from Disaster (https://www.kaggle.com/c/titanic/data)
 * **Variável alvo**: Sobreviveu (Survived)
@@ -53,6 +67,10 @@ Com isso, teremos um problema de Classificação, para determinar quem sobrevive
   * Base de dados de teste com a previsão da sobrevivência de cada passageiro, em arquivo Excel.
 
 
+
 ## Comunicação
+* Equipe de desenvolvimento com reuniões diárias em modelo Scrum.
+* Reuniões de status executivos a cada 3 semanas.
 * Pontos de contato:
-  * Consultoria: Paulo Pestana
+  * Retail Co.: Soares
+  * Consultoria: Thiago
