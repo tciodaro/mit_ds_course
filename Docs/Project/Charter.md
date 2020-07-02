@@ -2,11 +2,12 @@
 
 ## Entendimento de negócio
 
-Um cliente importador de vinhos portugueses deseja aumentar as suas vendas e para isso necessita de classificar alguns vinhos por nota de 0 a 10 de acordo com uma base de avaliação de vinhos portugueses. 
+Um importador de vinhos portugueses deseja aumentar o lucro de suas vendas. Para manter o interesse de seus clientes, e dada a grande variedade de produtores de vinhos em Portugal, ele sempre está realizando a compra de novos vinhos. Nem sempre os vinhos caem no gosto dos clientes, independente de serem caros ou baratos. O importador gostaria de classificar os vinhos que compra entre duas classes: baixa e alta qualidade de acordo com as características de cada vinho.
+Os produtores portugueses provém várias informações que caracterizam seu vinho, como: acidez, teor alcoólico, pH, densidade, sulfatos e outros.
 
 ## Escopo
 
-A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de vendas e logística. Para isso, a empresa utilizou uma base histórica, em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas.
+A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de compras e vendas. Para isso, a empresa utilizou uma base histórica em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas e consequentemente seu lucro.
 
 * A solução deve observar o histórico de dados e prover uma avaliação, por nota de qualidade para cada vinho
 * Os dados serão coletadas através de arquivos CSV.
@@ -33,9 +34,13 @@ A empresa gostaria de investir numa solução baseada em dados para auxiliar os 
 
 ## Planejamento
 O projeto deve ser realizado em 1 mes. Está prevista a passagem de conhecimento entre os especialistas do negócio e a equipe de cientistas de dados (representada pelo PO).
-* Semana 1: entendimento de negócio, sessões de transferencia de conhecimento e planejamento desenho da solução.
-* Semana 2 e 3: ciclos de desenvolvimento da solução inicial (sprints).
-* Semana 4: geração de relatórios e documentação e apresentação dos resultados finais e transferência de conhecimento.
+
+* Conhecimento dos dados - Entendimento do negócio e o contexto em que os dados e informaçẽos se inserem. Planejamento e desenho da solução.
+* Pré Processamento - Adequação/Formatação dos dados, Tratamento de dados faltantes e forma da curva, criação/exclusão de variáveis, redução de dimensionalidade se for o caso
+* Escolha e aplicação do modelo de machine learning
+* medição dos resultados
+* Aperfeiçoamento
+* Geração de relatórios e documentação e apresentação dos resultados finais e transferência de conhecimento.
 
 ## Arquitetura
 
@@ -51,8 +56,6 @@ O projeto deve ser realizado em 1 mes. Está prevista a passagem de conhecimento
 * Relatórios:
   * Os relatórios serão feitos após o processamento do treinamento dos modelos.
   * Os relatórios são disponibilizados como exportações HTML dos notebooks utilizados.
-
-
 
 ## Comunicação
 * Equipe de desenvolvimento com reuniões diárias em modelo Scrum.
