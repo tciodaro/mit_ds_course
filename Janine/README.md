@@ -1,12 +1,15 @@
 # Bibliotecas que necessitam ser instaladas pra o funcionamento pleno do projeto
-# Comandos executados para ambiente ANACONDA-JUPITER
+# Comandos executados para ambiente ANACONDA-JUPITER, cada linha ou célula do notebook deve conter 1 linha de comandos mencionada abaixo
 
-pip install pandas
+******
+pip install panda
 pip install snappy
-
-pip install sklearn
 pip install numpy
-pip install sklearn matplotlib
-pip install sklearn graphviz
-pip install sklearn os
-pip install import nltk
+pip install seaborn
+pip install nltk
+pip install matplotlib
+pip install os
+pip install graphviz
+pip install sklearn
+pip install nltk
+******
