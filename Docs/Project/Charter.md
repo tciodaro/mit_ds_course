@@ -2,15 +2,14 @@
 
 ## Entendimento de negócio
 
-Retail Co. é uma empresa de lojas de departamentos, com 45 lojas localizadas em diferentes localidades. Cada loja possui uma quantidade de departamentos, onde produtos de diversos tipos são vendidos. Frequentemente, a empresa investe em propagandas e promoções (Markdown), que geralmente são feitas antes de feriados importantes, como super bowl, dia do trabalho...
+Homes North of Boston é uma empresa que presta consultoria para pessoas que querem vender ou comprar imóveis, fornecendo também suporte durante a transação. A Homes North of Boston realiza um atualização periódica do valor dos imóveis nas diversas regiões de Boston, para que possa repassar aos seus clientes valores que se aproximem ao máximo da realidade do mercado.  Além disso ela necessita de um método eficiente que lhe permita predizer o valor de um novo imóvel, tendo como base outros, cujos valores já sejam conhecidos. 
 
 
 
 ## Escopo
 
-A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores da empresa em suas decisões de planejamento de vendas e logística. Para isso, a empresa fez uma coleta de histórico semanal de suas vendas, em conjunto com um grupo de variáveis que são consideradas interessantes para o entendimento do volume de vendas.
+A empresa gostaria de investir numa solução baseada em dados para auxiliar os consultores a avaliar corretamente o valor do imóveis postos para venda.  A avaliação deverá ser feita tendo como base diversos parâmetros, vinculados a outras casas que já foram vendidas na região, como: área da casa, número de quartos, número de banheiros, etc. 
 
-* A solução deve observar o histórico de dados e fazer a previsão das próximas semanas.
 * Os dados serão coletadas através de arquivos CSV de um servidor FTP.
 * O resultado da previsão será exportado como arquivo CSV.
 * O resultado pode ser consumido em relatórios estáticos.
@@ -20,17 +19,16 @@ A empresa gostaria de investir numa solução baseada em dados para auxiliar os 
 	* Consultoria:
 		* Project lead (Thiago)
 		* PO (Thiago)
-		* Data scientist(s) (Oliveira, Machado)
+		* Data scientist(s) (Nascimento, Cristiano)
 		* Account manager (Oliveira)
-	* Retail Co:
+	* Homes North of Boston:
 		* Data administrator
 		* Business contact
 
 ## Métricas
-* Objetivo qualitativo: otimizar o planejamento da planta de produção.
-* Figura de mérito: erro absoluto percentual médio (MAPE)
-* Benchmarking: processo atual trabalha com um MAPE de aproximadamente 50%.
-* Métrica deve ser medida sobre todo o histórico de teste, que possui o mesmo comprimento que o horizonte de previsão da ferramenta (20 semanas).
+* Objetivo qualitativo: possibilitar avaliação mais precisa do valor de uma casa. 
+* Figura de mérito: erro médio absoluto (MAE), erro quadrático médio (MSE) e raiz do erro quadrático médio (RMSE)
+* Benchmarking: predição dos valores aceitam um RMSE de no máximo, 10% do valor médio dos imóveis. 
 
 
 ## Planejamento
