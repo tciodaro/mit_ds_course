@@ -20,6 +20,8 @@ Os arquivos foram combinados e foram adicionadas duas colunas indicando o tipo d
 
 Todas as colunas são do tipo float exceto 'quality', 'red' e 'white' que são int.
 
+Quality possui valores de 3 a 9
 
+Não foram encontrados valores nulos na base de dados.
 
 

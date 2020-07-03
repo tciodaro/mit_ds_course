@@ -1,1 +1,1 @@
-# mit_ds_retail
+# Projeto de Algoritmos Supervisionados para classificação
