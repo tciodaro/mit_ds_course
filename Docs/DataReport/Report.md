@@ -9,7 +9,7 @@ Esse relatório das bases de dados do projeto.
 
 | Nome Dataset | Origem   | Destino  | Script |
 | ----:| ----: | ----: | ----: | ------: |
-| Wine| Red Wine + White Wine | Processado para qualidade de dados | [data_prep.ipynb](../../Code/DataPrep/data_perp.ipynb) | 
+| Wine| Red Wine + White Wine | Processado para qualidade de dados | [data_prep.ipynb](../../Code/DataPrep/data_prep.ipynb) | 
 
 
 * Base de Vinhos
