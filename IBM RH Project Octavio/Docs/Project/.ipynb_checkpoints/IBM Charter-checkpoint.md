@@ -21,8 +21,7 @@ The dataset was build requesting wheter the employee would be willing to leave t
 ## Metrics
 
 * Qualitative goal: Estimate if an employee would be willing to leave the company for a similar wage based on its caracteristics
-* 
-* Benchmarking: Recall (TP/TP+FN) >=  95% as the main goal is to practively take action to prevent good employee to leave, it is more important to correctly map the unsatisfied employee than wrongly classify a true satisfied employee.
+* Benchmarking: Positive attition Recall (TP/FP+TP) as the main goal is to practively take action to prevent good employee to leave, it is more important to correctly map the unsatisfied employee than wrongly classify a true satisfied employee.
 
 ## Planning 
 

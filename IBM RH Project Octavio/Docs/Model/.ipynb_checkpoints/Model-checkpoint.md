@@ -6,7 +6,7 @@ The redundant and non informative variables were removed from the data.
 
 The classifier categorical variables were transformed in to binary columns.
 
-Due to the high correlation beetween two variables (Joblevel and MonthlyIncome), It wasa decided to remove the JobLevel from thhe analysis as the result were sligly better without it.
+Due to the high correlation beetween two variables (Joblevel and MonthlyIncome), It was decided to remove the JobLevel from the analysis as the results were sligly better without it.
 
 Due to distribution nature of some variables, they were passed in to a log transformation ('MonthlyIncome','YearsSinceLastPromotion','TotalWorkingYears','NumCompaniesWorked').
 
